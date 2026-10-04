@@ -27,7 +27,7 @@ function App() {
   <div>
 <ChaiList items={menu}/>
   </div>
-    </>
+    </>...
   )
 }
 
