@@ -21,13 +21,13 @@ function App() {
     <ChaiCard name="HeadPhones" price={3000}/> 
     <ChaiCard name="Purifier" price={8000} isSpecial={true}/> 
   </div>
-  <div>
+  {/* <div>
     <Counter/>
-  </div>
+  </div> */}
   <div>
 <ChaiList items={menu}/>
   </div>
-    </>...
+    </>
   )
 }
 
