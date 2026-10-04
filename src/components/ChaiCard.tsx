@@ -1,6 +1,15 @@
-export function ChaiCard({name,price,isSpecial=false}){
+
+interface ChaiCardProp{
+name:string,
+price:number,
+isSpecial?:boolean
+
+}
+
+export function ChaiCard({name,price,isSpecial=false}:ChaiCardProp){
     return (
         <div>
+            <h1>Chai</h1>
             <article>
 
             <h2>{name} {isSpecial && <span>⭐</span>}</h2>
