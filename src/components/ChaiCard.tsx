@@ -1,17 +1,9 @@
+import React from 'react'
 
-
-
-interface ChaiCardProps{
-    name:string,
-    price:number,
-    isSpecial?:boolean
-}
-const ChaiCard = ({name,price,isSpecial}:ChaiCardProps) => {
+const ChaiCard = () => {
   return (
     <div>
-
-        <h2>{name} {isSpecial &&<span> ⭐</span>}</h2>
-      <p>{price}</p>
+      
     </div>
   )
 }

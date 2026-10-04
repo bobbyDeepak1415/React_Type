@@ -1,18 +1,10 @@
 
 
-import type { Chai } from "../types"
-import ChaiCard from "./ChaiCard"
+import React from 'react'
 
-interface ChaiListProps{
-items:Chai[]
-}
-
-const ChaiList = ({items}:ChaiListProps) => {
+const ChaiList = () => {
   return (
     <div>
-      {items.map((chai)=>{
-        return <ChaiCard name={chai.name} key={chai.id} price={chai.price} isSpecial={chai.price>300}/>
-      })}
       
     </div>
   )
