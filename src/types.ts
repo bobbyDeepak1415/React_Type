@@ -1,9 +1,10 @@
 
 
+
 export interface Chai{
     id:number,
-    name:string,
-    price:number
+    price:number,
+    name:string
 }
 
 
