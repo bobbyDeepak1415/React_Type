@@ -3,7 +3,7 @@ import ProductList from "./components/ProductList"
 
 import type { Product } from "./types"
 
-const items:Product[]=[
+const products:Product[]=[
   {id:1,name:"Sugar",price:350},
   {id:2,name:"Milk",price:150},
   {id:3,name:"Ink",price:200},
@@ -15,7 +15,7 @@ const App = () => {
     <div>
       <h1>Hello</h1>
       <ProductCard name="Coffee" price={300} isSpecial={true}/>
-      <ProductList/>
+      <ProductList items={products}/>
       
     </div>
   )
