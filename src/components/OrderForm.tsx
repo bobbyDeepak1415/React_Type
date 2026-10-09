@@ -19,7 +19,7 @@ export default function OrderForm({onSubmit}:OrderFormProps) {
     <label>Chai Name:</label>
     <input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
     <label>Cups</label>
-    <input type="number"/>
+    <input type="number" value={cups} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setCups(Number(e.target.value))}/>
   </form>
 }
 
