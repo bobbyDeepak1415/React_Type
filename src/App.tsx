@@ -17,7 +17,9 @@ const App = () => {
       <h1>Hello</h1>
       <ProductCard name="Coffee" price={300} isSpecial={true}/>
       <ProductList items={products}/>
-      
+      <OrderForm onSubmit={(e)=>{
+        console.log("Order Placed:",e.name,e.quantity)
+      }}/>
       
     </div>
   )
