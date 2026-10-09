@@ -11,7 +11,9 @@ export default function OrderForm({onSubmit}:OrderFormProps) {
   const [cups,setCups]=useState<number>(1)
 
 
-  function handleSubmit(){
+  function handleSubmit(e:React.FormEvent<HTMLFormElement>){
+    e.preventDefault()
+    onSubmit({name,cups})
 
   }
 
@@ -20,6 +22,7 @@ export default function OrderForm({onSubmit}:OrderFormProps) {
     <input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
     <label>Cups</label>
     <input type="number" value={cups} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setCups(Number(e.target.value))}/>
+  <button type="submit">Submit</button>
   </form>
 }
 
