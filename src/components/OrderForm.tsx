@@ -10,16 +10,16 @@ export default function OrderForm({onSubmit}:OrderFormProps) {
   const [name,setName]=useState<string>("Masala")
   const [cups,setCups]=useState<number>(1)
 
-function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    onSubmit({ name, cups });
+
+  function handleSubmit(){
+
   }
 
   return <form onSubmit={handleSubmit}>
-<label>Chai Name:</label>
-<input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
-<label>Cups:</label>
-<input value={cups} type="number" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setCups(Number(e.target.value) || 0)}/>
+    <label>Chai Name:</label>
+    <input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
+    <label>Cups</label>
+    <input type="number"/>
   </form>
 }
 
