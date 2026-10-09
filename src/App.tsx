@@ -20,7 +20,6 @@ const App = () => {
       <OrderForm onSubmit={(e)=>{
         console.log("Order Placed:",e.name,e.quantity)
       }}/>
-      
     </div>
   )
 }

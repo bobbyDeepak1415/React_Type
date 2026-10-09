@@ -1,24 +1,28 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 
 interface OrderFormProps{
   onSubmit(order:{name:string,quantity:number}):void
 }
-export default function OrderForm({onSubmit}:OrderFormProps) {
 
-const [name,setName]=useState<string>("Water Bottle")
-const [quantity,setQuantity]=useState<number>(2)
+const OrderForm = ({onSubmit}:OrderFormProps) => {
 
-const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
+  const [name,setName]=useState<string>('')
+  const [quantity,setQuantity]=useState<number>(0)
+
+  const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
 e.preventDefault()
 onSubmit({name,quantity})
-}
+  }
+
 
   return <form onSubmit={handleSubmit}>
     <label>Product Name:</label>
-    <input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
+    <input type="string" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)} />
     <label>Quantity:</label>
-    <input type="number" value={quantity} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))}/>
-      <button type="submit">Submit</button>
+    <input type="number" value={quantity} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))} />
+<button type="submit">Submit</button>
   </form>
 }
+
+export default OrderForm
