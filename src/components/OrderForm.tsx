@@ -6,11 +6,12 @@ interface OrderFormProps{
 
 const OrderForm = ({onSubmit}:OrderFormProps) => {
 
-    const [name,setName]=useState()
+    const [name,setName]=useState<string>("Water bottle")
+    const [quantity,setQuantity]=useState<number>(150)
 
   return <form>
     <label>Product Name:</label>
-    <input/>
+    <input value={name} type="text" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)} />
   </form>
 }
 
