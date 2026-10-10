@@ -12,6 +12,8 @@ const OrderForm = ({onSubmit}:OrderFormProps) => {
   return <form>
     <label>Product Name:</label>
     <input value={name} type="text" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)} />
+    <label>Quantity:</label>
+    <input value={quantity} type="number" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(e.target.value)} />
   </form>
 }
 
