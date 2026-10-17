@@ -10,7 +10,7 @@ const ProductList = ({products}:ProductListProps) => {
   return (
     <div>
         {products.map((product)=>{
-            return <ProductCard name={product.name} price={product.price} isSpecial={product.price>300}/>
+            return <ProductCard key={product.id} name={product.name} price={product.price} isSpecial={product.price>300}/>
         })}
       
     </div>
