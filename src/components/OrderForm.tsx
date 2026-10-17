@@ -11,7 +11,7 @@ const OrderForm = ({onSubmit}:OrderFormProps) => {
     const [quantity,setQuantity]=useState<number>(0)
 
     const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
-        e.preventDefault
+        e.preventDefault()
         onSubmit({name,quantity})
     }
 
@@ -22,7 +22,7 @@ const OrderForm = ({onSubmit}:OrderFormProps) => {
             <input value={name} type="text" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
             <label>Quantity:</label>
             <input value={quantity} type="number" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))}/>
-                <button>Submit</button>
+                <button type="submit">Submit</button>
         </form>
       
     </div>
