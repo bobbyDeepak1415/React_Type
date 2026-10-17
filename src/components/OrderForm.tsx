@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 
 
 interface OrderFormProps{
@@ -11,7 +11,7 @@ const OrderForm = ({onSubmit}:OrderFormProps) => {
     const [quantity,setQuantity]=useState<number>(0)
 
 
-    const handleSubmit=(e)=>{
+    const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
 e.preventDefault()
 onSubmit({name,quantity})
     }
@@ -20,7 +20,8 @@ onSubmit({name,quantity})
     <label>Order Name:</label>
     <input value={name} type="text" onChange={(e)=>setName(e.target.value)}/>
     <label>Quantity:</label>
-    <input value={quantity} type="number" onChange={(e)=>setQuantity(Number(e.target.value))}/>
+    <input value={quantity} type="number" onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))}/>
+        <button type="submit">Place order</button>
   </form>
 }
 
