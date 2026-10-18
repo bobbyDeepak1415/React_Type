@@ -1,3 +1,4 @@
+import Card from "./components/Card"
 import OrderForm from "./components/OrderForm"
 import ProductCard from "./components/ProductCard"
 import ProductList from "./components/ProductList"
@@ -19,7 +20,9 @@ const App = () => {
 <ProductList products={items}/>
 <OrderForm onSubmit={(product)=>{
   console.log("order placed",product.name ,product.quantity)
+
 }}/>
+
 
     </div>
   )
