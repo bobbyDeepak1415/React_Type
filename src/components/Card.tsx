@@ -1,16 +1,10 @@
+import React from 'react'
 
-import type {PropsWithChildren,ReactNode} from 'react'
-
-interface CardProps extends PropsWithChildren{
-    title:string,
-    footer?:ReactNode
-}
-
-const Card = ({title,children,footer}:CardProps) => {
+const Card = () => {
   return (
-    <section>
-        
-    </section>
+    <div>
+      
+    </div>
   )
 }
 
