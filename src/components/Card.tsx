@@ -2,14 +2,15 @@
 import type {PropsWithChildren,ReactNode} from 'react'
 
 interface CardProps extends PropsWithChildren{
-    name:string
+    title:string,
+    footer?:ReactNode
 }
 
-const Card = () => {
+const Card = ({title,children,footer}:CardProps) => {
   return (
-    <div>
-      
-    </div>
+    <section>
+        
+    </section>
   )
 }
 
