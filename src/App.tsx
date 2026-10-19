@@ -1,3 +1,4 @@
+import OrderForm from "./components/OrderForm"
 import ProductCard from "./components/ProductCard"
 import ProductList from "./components/ProductList"
 
@@ -18,6 +19,9 @@ const App = () => {
 <ProductCard name="Coffee" price={250} isSpecial={true}/>
 
 <ProductList products={items}/>
+<OrderForm onSubmit={(item)=>{
+  console.log("order placed: ",item.name,item.quantity)
+}}/>
     </div>
   )
 }
