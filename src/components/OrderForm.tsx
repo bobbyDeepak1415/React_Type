@@ -1,10 +1,30 @@
+import { useState } from "react"
 
-const OrderForm = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+
+interface OrderFormProps{
+onSubmit:(order:{name:string,quantity:number})=>void
+}
+
+const OrderForm = ({onSubmit}:OrderFormProps) => {
+
+  const [name,setName]=useState<string>("")
+  const [quantity,setQuantity]=useState<number>(0)
+
+const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
+e.preventDefault()
+onSubmit({name,quantity})
+
+}
+
+
+
+  return <form onSubmit={handleSubmit}>
+      <label>Item name:</label>
+      <input type="text" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
+      <label>Quantity:</label>
+      <input type="number" value={quantity} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))}/>
+    </form>
+  
 }
 
 export default OrderForm
