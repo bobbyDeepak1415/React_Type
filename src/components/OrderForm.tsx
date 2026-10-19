@@ -23,6 +23,7 @@ onSubmit({name,quantity})
       <input type="text" value={name} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setName(e.target.value)}/>
       <label>Quantity:</label>
       <input type="number" value={quantity} onChange={(e:React.ChangeEvent<HTMLInputElement>)=>setQuantity(Number(e.target.value))}/>
+        <button type="submit">Place order</button>
     </form>
   
 }
