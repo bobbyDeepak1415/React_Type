@@ -18,3 +18,7 @@ const ProductList = ({products}:ProductListProps) => {
 }
 
 export default ProductList
+
+
+
+......
