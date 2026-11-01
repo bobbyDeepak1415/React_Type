@@ -1,15 +1,16 @@
+import React from 'react'
 
-interface ProductCardProps{
-  name:string,
+
+interface ProductProps{
+  title:string,
   price:number,
   isSpecial?:boolean
-}
 
-const ProductCard = ({name,price,isSpecial}:ProductCardProps) => {
+}
+const ProductCard = ({}:ProductProps) => {
   return (
     <div>
-      <h2>{name} {isSpecial && <span>🌟</span>}</h2>
-      <p>{price}</p>
+      Product Card
     </div>
   )
 }

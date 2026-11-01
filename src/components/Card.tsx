@@ -18,3 +18,7 @@ const Card = ({title,children,footer}:CardProps) => {
 }
 
 export default Card
+
+
+
+
