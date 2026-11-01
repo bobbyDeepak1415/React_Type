@@ -30,6 +30,6 @@ onSubmit({name,quantity})
 
 export default OrderForm
 
-...
+
 
 

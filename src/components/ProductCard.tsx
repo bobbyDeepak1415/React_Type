@@ -1,4 +1,3 @@
-import React from 'react'
 
 
 interface ProductProps{
@@ -7,10 +6,16 @@ interface ProductProps{
   isSpecial?:boolean
 
 }
-const ProductCard = ({}:ProductProps) => {
+const ProductCard = ({title,price,isSpecial}:ProductProps) => {
   return (
     <div>
-      Product Card
+      {title}
+      <br></br>
+      {price}
+      {isSpecial &&
+      
+      <span>🌟</span>
+      }
     </div>
   )
 }

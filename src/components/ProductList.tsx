@@ -1,9 +1,17 @@
 import React from 'react'
 
-const ProductList = () => {
+import type { Product } from '../types'
+import ProductCard from './ProductCard'
+
+interface ProductListProps{
+products:Product[]
+}
+const ProductList = ({products}:ProductListProps) => {
   return (
     <div>
-      ProductList
+      {products.map((product)=>(
+        <ProductCard key={product.id} title={product.title} price={product.price}/>
+      ))}
     </div>
   )
 }
